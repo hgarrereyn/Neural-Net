@@ -12,6 +12,17 @@ Documentation is provided in the files.
 # Using the genetic evolution simulator
 *Working but still under development and no documentation*
 
+Controls:
+- arrow keys : change view
+- space : move camera to origin
+- 0/9 : zoom in/out
+- 8 : toggle max speed (doesn't wait between frames)
+- 7/6 : increase/decrease speed
+- 5 : run at real time
+- u : toggle scene rendering (use this with max speed)
+- f : lock the camera to the leader
+- 1 : toggle fullscreen
+
 Packages needed:
 - green.neural.net
 - green.neural.net.ga
