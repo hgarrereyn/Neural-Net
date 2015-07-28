@@ -241,7 +241,7 @@ public class WormCreature extends AbstractCreature {
 	@Override
 	public int[] getNet() {
 		// TODO Auto-generated method stub
-		return new int[]{13,8,6};
+		return new int[]{13,20,6};
 	}
 
 }

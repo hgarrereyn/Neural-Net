@@ -1,5 +1,7 @@
 package green.neural.net;
 
+import green.neural.net.Neuron.Connection;
+
 import java.util.Random;
 
 public class NeuralNet {
@@ -42,7 +44,6 @@ public class NeuralNet {
 				for (int c = 0; c < neurons[i][n].getConnections().length; ++c){
 					neurons[i][n].getConnections()[c].weight = data[dIndex];
 					dIndex++;
-					
 				}
 			}
 		}
@@ -240,7 +241,9 @@ public class NeuralNet {
 		for (int i = 0; i < this.neurons.length; ++i){
 			for (int j = 0; j < this.neurons[i].length; ++j){
 				for (int c = 0; c < (child.neurons[i][j].getConnections().length); ++c){
-					child.neurons[i][j].getConnections()[c].weight = r.nextBoolean()?this.neurons[i][j].getConnections()[c].weight:net2.neurons[i][j].getConnections()[c].weight;
+					Neuron.Connection connection = child.neurons[i][j].new Connection();
+					connection.weight = r.nextBoolean()?this.neurons[i][j].getConnections()[c].weight:net2.neurons[i][j].getConnections()[c].weight;
+					child.neurons[i][j].getConnections()[c] = connection;
 				}
 				child.neurons[i][j].mutate(mutationRate);
 			}

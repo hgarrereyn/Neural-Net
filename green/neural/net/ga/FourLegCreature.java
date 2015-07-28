@@ -321,7 +321,7 @@ public class FourLegCreature extends AbstractCreature {
 
 	@Override
 	public int[] getNet() {
-		return new int[]{13,8,8};
+		return new int[]{13,30,8};
 	}
 
 }

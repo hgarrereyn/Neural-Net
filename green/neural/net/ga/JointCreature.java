@@ -120,7 +120,7 @@ public class JointCreature extends AbstractCreature {
 
 	@Override
 	public int[] getNet() {
-		return new int[]{5,8,1};
+		return new int[]{5,20,1};
 	}
 
 }

@@ -12,7 +12,7 @@ import org.jbox2d.dynamics.World;
 import org.jbox2d.dynamics.joints.RevoluteJoint;
 import org.jbox2d.dynamics.joints.RevoluteJointDef;
 
-public class Creature extends AbstractCreature {
+public class UnevenCreature extends AbstractCreature {
 
 	public Body cCoreBody;
 	public Body cLeftLegBody;
@@ -24,9 +24,9 @@ public class Creature extends AbstractCreature {
 	public RevoluteJoint cRightLegJoint;
 	public RevoluteJoint cRightFootJoint;
 	
-	public Creature(){}
+	public UnevenCreature(){}
 	
-	public Creature(World world, float x, float y){
+	public UnevenCreature(World world, float x, float y){
 		//Core
 		BodyDef cCoreDef = new BodyDef();
 		cCoreDef.type = BodyType.DYNAMIC;
@@ -54,7 +54,7 @@ public class Creature extends AbstractCreature {
 		cLeftLegDef.fixedRotation = false;
 		//---
 		PolygonShape cLeftLeg = new PolygonShape();
-		cLeftLeg.setAsBox(0.2f, 0.6f);
+		cLeftLeg.setAsBox(0.2f, 1.2f);
 		//--
 		FixtureDef cLeftLegFixture = new FixtureDef();
 		cLeftLegFixture.shape = cLeftLeg;
