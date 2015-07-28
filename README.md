@@ -1,6 +1,8 @@
 # Neural-Net
 A small Java library to run and train neural networks using backpropagation and genetic algorithms.
 
+*Note: this was made quickly and for fun, please don't try to use this in any important project*
+
 Examples are provided in green.neural.net.main.
 
 # Using neural net
